@@ -118,7 +118,7 @@
 	<div class="menubar fixed">
 		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="supported-api-endpoints-item" class="level-1"><a id="supported-api-endpoints-link" href="./scalr/rest/endpoints.html#supported-api-endpoints" class="level-1" pref="#supported-api-endpoints">Supported API Endpoints</a><ul class="level-2" id="supported-api-endpoints-list"><li id="supported-api-endpoints-index-apis-item" class="level-2"><a id="supported-api-endpoints-index-apis-link" href="./scalr/rest/endpoints.html#supported-api-endpoints-index-apis" class="level-2" pref="#supported-api-endpoints-index-apis">Index APIs</a></li><li id="supported-api-endpoints-document-apis-item" class="level-2"><a id="supported-api-endpoints-document-apis-link" href="./scalr/rest/endpoints.html#supported-api-endpoints-document-apis" class="level-2" pref="#supported-api-endpoints-document-apis">Document APIs</a></li><li id="supported-api-endpoints-search-apis-item" class="level-2"><a id="supported-api-endpoints-search-apis-link" href="./scalr/rest/endpoints.html#supported-api-endpoints-search-apis" class="level-2" pref="#supported-api-endpoints-search-apis">Search APIs</a></li><li id="supported-api-endpoints-streaming-apis-item" class="level-2"><a id="supported-api-endpoints-streaming-apis-link" href="./scalr/rest/endpoints.html#supported-api-endpoints-streaming-apis" class="level-2" pref="#supported-api-endpoints-streaming-apis">Streaming APIs</a></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/Docs/commit/879ec0ae93df27be2b787775ed5edddc386f0e0a">Aug 3, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars3.githubusercontent.com/u/19864447?v=4" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/Docs/tree/master/src/scalr/rest/endpoints.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h1 id="supported-api-endpoints">Supported API Endpoints</h1><p>Here is a list of all the supported endpoints for the Elasticsearch service offered by appbase.io.</p><h2 id="supported-api-endpoints-index-apis">Index APIs</h2><p>An app in appbase.io is an index in Elasticsearch.</p><ul>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/Docs/commit/e833aa40daa151359c22840053de0bf2c307aa6b">Aug 14, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars3.githubusercontent.com/u/19864447?v=4" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/Docs/tree/master/src/scalr/rest/endpoints.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h1 id="supported-api-endpoints">Supported API Endpoints</h1><p>Here is a list of all the supported endpoints for the Elasticsearch service offered by appbase.io.</p><h2 id="supported-api-endpoints-index-apis">Index APIs</h2><p>An app in appbase.io is an index in Elasticsearch.</p><ul>
 <li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-get-index.html"><strong>Get an App</strong> <code style="white-space: pre;">GET /:app</code></a><br>Informational endpoint</p>
 </li>
 <li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-get-settings.html"><strong>Get an App’s Settings</strong> <code style="white-space: pre;">GET /:app/_settings</code></a><br>Get settings in an app</p>
@@ -168,8 +168,8 @@
 <li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-search.html#search-search"><strong>Search with query strings</strong> <code style="white-space: pre;">GET /:app/:type/_search?q=*:*</code></a>  </p>
 </li>
 <li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-request-body.html"><strong>Search with a request body</strong> <code style="white-space: pre;">POST /:app/:type/_search</code></a><br>Everything in the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl.html">Query DSL</a> is supported for the <strong>query</strong> object in the request body.</p>
-</li>
-</ul><p>Popular Queries:</p><ol>
+<p>  Popular Queries:</p>
+<ol>
 <li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/full-text-queries.html">Full-text search</a>  </p>
 </li>
 <li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/term-level-queries.html">Term Queries</a>  </p>
@@ -182,7 +182,11 @@
 </li>
 <li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/span-queries.html">Span Queries</a>  </p>
 </li>
-</ol><h2 id="supported-api-endpoints-streaming-apis">Streaming APIs</h2><ul>
+</ol>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/plugins/2.4/delete-by-query-usage.html"><strong>Delete by query</strong> <code style="white-space: pre;">DELETE /:app/:type/_query</code></a><br>Delete documents matching the search query, everything in the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl.html">Query DSL</a> is supported for the <strong>query</strong> object in the request body.</p>
+</li>
+</ul><h2 id="supported-api-endpoints-streaming-apis">Streaming APIs</h2><ul>
 <li><p><strong class="li-title">Stream a Document</strong> <code class="code-with-title" style="white-space: pre;">GET /:app/:type/:id?stream=true</code><br>Fetches the document and streams further updates to the document.</p>
 </li>
 <li><p><strong class="li-title">Stream a Query</strong> <code class="code-with-title" style="white-space: pre;">GET /:app/:type/_search?stream=true</code> (or POST)<br>Fetches a query’s response and streams further updates to the query.</p>
