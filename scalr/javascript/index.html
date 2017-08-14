@@ -64,6 +64,8 @@
         <ul class="dropdown-menu">
           <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
             <a ng-href=./scalr/rest/intro.html ng-bind="file.label" class="ng-binding" href=./scalr/rest/intro.html>Quick Start</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+            <a ng-href=./scalr/rest/endpoints.html ng-bind="file.label" class="ng-binding" href=./scalr/rest/endpoints.html>API Endpoints</a>
           </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
             <a ng-href=./scalr/rest/index.html ng-bind="file.label" class="ng-binding" href=./scalr/rest/index.html>index</a>
           </li><!-- end ngRepeat: file in folder.files -->

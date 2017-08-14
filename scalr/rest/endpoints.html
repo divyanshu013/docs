@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="./bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./styles/docs.css">
 <script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc" class="big-h3">
+<body role="flatdoc" class="no-literate">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -116,22 +116,101 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
 	<div class="menubar fixed">
-		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="apireferencegodoc-item" class="level-1"><a id="apireferencegodoc-link" href="./scalr/golang/api-reference.html#apireferencegodoc" class="level-1" pref="#apireferencegodoc">APIreference@godoc </a></li></ul></li></ul></div>
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="supported-api-endpoints-item" class="level-1"><a id="supported-api-endpoints-link" href="./scalr/rest/endpoints.html#supported-api-endpoints" class="level-1" pref="#supported-api-endpoints">Supported API Endpoints</a><ul class="level-2" id="supported-api-endpoints-list"><li id="supported-api-endpoints-index-apis-item" class="level-2"><a id="supported-api-endpoints-index-apis-link" href="./scalr/rest/endpoints.html#supported-api-endpoints-index-apis" class="level-2" pref="#supported-api-endpoints-index-apis">Index APIs</a></li><li id="supported-api-endpoints-document-apis-item" class="level-2"><a id="supported-api-endpoints-document-apis-link" href="./scalr/rest/endpoints.html#supported-api-endpoints-document-apis" class="level-2" pref="#supported-api-endpoints-document-apis">Document APIs</a></li><li id="supported-api-endpoints-search-apis-item" class="level-2"><a id="supported-api-endpoints-search-apis-link" href="./scalr/rest/endpoints.html#supported-api-endpoints-search-apis" class="level-2" pref="#supported-api-endpoints-search-apis">Search APIs</a></li><li id="supported-api-endpoints-streaming-apis-item" class="level-2"><a id="supported-api-endpoints-streaming-apis-link" href="./scalr/rest/endpoints.html#supported-api-endpoints-streaming-apis" class="level-2" pref="#supported-api-endpoints-streaming-apis">Streaming APIs</a></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/Docs/commit/906d9ebaeadef5863383c38b4f4b05fb85899694">May 10, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars3.githubusercontent.com/u/630042?v=4" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/Docs/tree/master/src/scalr/golang/api-reference.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h1 id="apireferencegodoc"><a href="https://godoc.org/github.com/appbaseio/go-appbase" target="_blank">APIreference@godoc <span class="fa fa-external-link"></span></a></h1><p><a href="https://github.com/appbaseio/go-appbase">go-appbase</a> is a data streams library for Go. You can read the API reference from godoc.org using the link above.</p><p>It can:</p><ul>
-<li>Continuously stream updates to documents, queries or filters over http-streams.  </li>
-<li>Index new documents and update existing ones.  </li>
-<li>Is compatible with <a href="https://github.com/olivere/elastic">Elasticsearch’s Go Client</a> maintained by Olivere. </li>
-</ul><p>You can read the <a href="http://docs.appbase.io/scalr/golang/golang-intro.html">quick start guide</a> for installation and basic usage.</p></div>
-	<!-- ngIf: !threeColumns && navigationSidebar -->
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/Docs/commit/879ec0ae93df27be2b787775ed5edddc386f0e0a">Aug 3, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars3.githubusercontent.com/u/19864447?v=4" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/Docs/tree/master/src/scalr/rest/endpoints.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h1 id="supported-api-endpoints">Supported API Endpoints</h1><p>Here is a list of all the supported endpoints for the Elasticsearch service offered by appbase.io.</p><h2 id="supported-api-endpoints-index-apis">Index APIs</h2><p>An app in appbase.io is an index in Elasticsearch.</p><ul>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-get-index.html"><strong>Get an App</strong> <code style="white-space: pre;">GET /:app</code></a><br>Informational endpoint</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-get-settings.html"><strong>Get an App’s Settings</strong> <code style="white-space: pre;">GET /:app/_settings</code></a><br>Get settings in an app</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-analyze.html#indices-analyze"><strong>Analyze a text</strong> <code style="white-space: pre;">GET /:app/_analyze</code></a><br>Run a specific analyzer against a text</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-get-mapping.html"><strong>Get an App’s Mapping</strong> <code style="white-space: pre;">GET /:app/_mapping</code></a><br>Get mappings for an app</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-get-mapping.html"><strong>Get a particular type’s Mapping</strong> <code style="white-space: pre;">GET /:app/_mapping/:type</code></a>  </p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-put-mapping.html"><strong>Add mapping for a new type</strong> <code style="white-space: pre;">PUT /:app/_mapping/type</code></a>  </p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-open-close.html"><strong>Close an App</strong> <code style="white-space: pre;">POST /:app/_close</code></a></p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-open-close.html"><strong>Open an App</strong> <code style="white-space: pre;">POST /:app/_open</code></a></p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-recovery.html"><strong>Get recovery information for an App</strong> <code style="white-space: pre;">GET /:app/_recovery</code></a></p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/indices-stats.html"><strong>Get an App’s stats</strong> <code style="white-space: pre;">GET /:app/_stats</code></a></p>
+</li>
+</ul><h2 id="supported-api-endpoints-document-apis">Document APIs</h2><ul>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-index_.html#docs-index_"><strong>Indexing a Document</strong> <code style="white-space: pre;">PUT /:app/:type/:id</code></a><br>with an id.</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-index_.html#_automatic_id_generation"><strong>Indexing a Document</strong> <code style="white-space: pre;">POST /:app/:type/</code></a><br>without an id.</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-get.html"><strong>Getting a Document</strong> <code style="white-space: pre;">GET /:app/:type/:id</code></a></p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-get.html#_source"><strong>Getting a Document Source</strong> <code style="white-space: pre;">GET /:app/:type/:id/_source</code></a></p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-delete.html"><strong>Deleting a Document</strong> <code style="white-space: pre;">DELETE /:app/:type/:id</code></a></p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-update.html"><strong>Updating a Document</strong> <code style="white-space: pre;">PUT /:app/:type/:id/_update</code></a></p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-update-by-query.html"><strong>Updating a Document By Query</strong> <code style="white-space: pre;">POST /:app/:type/_update_by_query</code></a></p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-multi-get.html#docs-multi-get"><strong>Getting Multiple Documents</strong> <code style="white-space: pre;">GET /:app/_mget</code></a><br>get documents across one or more types, specified in the request body.</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-multi-get.html#docs-multi-get"><strong>Getting Multiple Documents</strong> <code style="white-space: pre;">GET /:app/:type/_mget</code></a><br>get documents on a specific type.</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-bulk.html"><strong>Bulk Document API</strong> <code style="white-space: pre;">POST /:app/_bulk</code></a><br>bulk operations across one or more types, specified in the request body.</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-bulk.html"><strong>Bulk Document API</strong> <code style="white-space: pre;">POST /:app/:type/_bulk</code></a><br>bulk operations on a specific type.</p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-termvectors.html"><strong>Getting a Document’s Term Vectors</strong> <code style="white-space: pre;">GET /:app/:type/:id/_termvector</code></a></p>
+</li>
+</ul><h2 id="supported-api-endpoints-search-apis">Search APIs</h2><ul>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-search.html#search-search"><strong>Search with query strings</strong> <code style="white-space: pre;">GET /:app/:type/_search?q=*:*</code></a>  </p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-request-body.html"><strong>Search with a request body</strong> <code style="white-space: pre;">POST /:app/:type/_search</code></a><br>Everything in the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl.html">Query DSL</a> is supported for the <strong>query</strong> object in the request body.</p>
+</li>
+</ul><p>Popular Queries:</p><ol>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/full-text-queries.html">Full-text search</a>  </p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/term-level-queries.html">Term Queries</a>  </p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/compound-queries.html">Compound Queries</a>  </p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/geo-queries.html">Geo Queries</a>  </p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/joining-queries.html">Query Joins</a>  </p>
+</li>
+<li><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/span-queries.html">Span Queries</a>  </p>
+</li>
+</ol><h2 id="supported-api-endpoints-streaming-apis">Streaming APIs</h2><ul>
+<li><p><strong class="li-title">Stream a Document</strong> <code class="code-with-title" style="white-space: pre;">GET /:app/:type/:id?stream=true</code><br>Fetches the document and streams further updates to the document.</p>
+</li>
+<li><p><strong class="li-title">Stream a Query</strong> <code class="code-with-title" style="white-space: pre;">GET /:app/:type/_search?stream=true</code> (or POST)<br>Fetches a query’s response and streams further updates to the query.</p>
+</li>
+</ul></div>
+	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
+		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
+			<li>
+				<div class="other-pages">Other pages in</div>
+			</li>
+			<li>
+				<a class="level-1 ng-binding" ng-href=./scalr/rest/index.html ng-bind="folder.name" href=./scalr/rest/index.html>rest</a>
+			</li>
+			<!-- ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./scalr/rest/intro.html ng-bind="file.label" href=./scalr/rest/intro.html>Quick Start</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./scalr/rest/endpoints.html ng-bind="file.label" href=./scalr/rest/endpoints.html>API Endpoints</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
+		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
+	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
 	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./scalr/rest/endpoints.html class="paginationLink pull-left">Previous</a>
+					<a href=./scalr/rest/intro.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./scalr/FAQs/jsapi.html class="paginationLink pull-right">Next</a>
+					<a href=./scalr/golang/api-reference.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>

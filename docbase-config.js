@@ -12,11 +12,10 @@ var docbaseConfig = {
     "repo": "Docs",
     "path": "src",
     "branch": "master",
-    "access_token": "YjExZDU1Njg0NzQ4Y2M4YWYyNDE2ZTVjMjI1YjQ4ZGY4MzQ0MDgwYg=="
+    "access_token": "OTAwNDU5MTk4M2NlYzViYzQxNzFlN2E3Yjk1MWQ2ZjhkODRjMTg5Yg=="
   },
   "indexHtml": "./html/main.html",
   "flatdocHtml": "./bower_components/docbase/html/flatdoc.html",
-  "html5mode": false,
   "default_version": "",
   "manual_override": true,
   "versions" : {
@@ -68,6 +67,10 @@ var docbaseConfig = {
         {
           "label": "Quick Start",
           "name": "intro"
+        },
+        {
+          "label": "API Endpoints",
+          "name": "endpoints"
         }
       ]
     },
